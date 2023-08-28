@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Oswald', sans-serif;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #93acbd;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #e9eef2;
+		}
+
+		.border {
+			border: 3px solid #c9d1d6;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #afcadb;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border background">
+		<a id="DASHBOARD" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-cloud" style="color: #93acbd;"></i> </a>
+                <a id="JOURNALING" onclick="navigate(this.id)" href="#"> <i class="fa-brands fa-pagelines" style="color: #a3d09f;"></i> </a>
+                <a id="SCHOOL" onclick="navigate(this.id)" href="#">  <i class="fa-solid fa-leaf" style="color: #dfcdaf;"></i> </a>
+                <a id="SPORT" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-dumbbell" style="color: #c8c9d5;"></i>
+                <a id="LISTS" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-list" style="color:  #a7b1c3;"></i>
+                <a id="TRASH" onclick="navigate(this.id)" href="#"> <i class="fa-regular fa-trash-can" style="color: #858e9d;"></i>
+	</nav>
+
+
+	<script>
+
+		let direction = "vertical";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'DASHBOARD')
+				window.open("https://DASHBOARD.com", '_blank').focus();
+			else if (id == "JOURNALING")
+				window.open("https://JOURNALING.com", '_blank').focus();
+			else if (id == "SCHOOL")
+				window.open("https://SCHOOL.com", '_blank').focus();
+                        else if (id == "SPORT")
+				window.open("https://SPORT.com", '_blank').focus();
+                        else if (id == "LISTS")
+				window.open("https://LISTS.com", '_blank').focus();
+                        else if (id == "TRASH")
+				window.open("https://ARCHIVE.com", '_blank').focus();
+
+		}
+	</script>
+
+
+</body>
+
+</html>
